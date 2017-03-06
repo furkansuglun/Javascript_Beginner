@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>17. Array'de Sort, Pop ve Push Metodları </title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+
+		var mevctuDersler = new Array ("Java" , "Javascript");
+		var verilecekDersler = new Array ("Python" , "Ionic");
+		var dersler = mevctuDersler.concat(verilecekDersler);
+		document.write(dersler.join());
+		document.write("<hr/>")
+		var siraliListe = dersler.sort();
+		document.write("<b>Sort Metodu</b><br/>" + siraliListe.join());
+        document.write("<hr/>")
+        siraliListe.pop();
+        document.write("<b>Pop Metodu</b><br/>" + siraliListe.join());
+        document.write("<hr/>")
+        siraliListe.push("Spring" , "Spring MVC");
+        document.write("<b>Push Metodu</b><br/>" + siraliListe.join());
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

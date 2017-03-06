@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>12. class / parametere atama</title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+
+		//class olutururken head tagı arasında olmaya dıkkat edilmelidir.
+		function ders(isim,kod,hoca,tarih) {
+			this.isim = isim;
+			this.kod = kod;
+			this.hoca = hoca;
+			this.tarih = tarih;
+        }
+
+
+        var ders1 = new ders("java" , 01 , "Furkan" , 2017);
+        document.write("ders adı : "+ ders1.isim + "<br/>");
+        var ders2 = new ders("js" , 02 , "Furkan" , 2017);
+        document.write("ders adı : "+ ders2.isim);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

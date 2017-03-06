@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>22. EventHandler'lar-onClick Komutu</title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+    
+        function funcSqrt() {
+            var x = prompt("Enter a number: " , "Enter here.");
+            var y = Math.sqrt(x);
+            alert("Result sqrt "+ x + " is: " + y);
+        }
+
+
+
+	</script>
+</head>
+<body>
+	<form>
+		<input type="button" value="Button" onclick="alert('Button clicked');alert('You have been see opened window');"/>
+        <input type="button" value="Sqrt" onclick="funcSqrt()"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>25. Formlara Ulaşmak-Forms ve Elements Komutları</title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+
+
+
+	</script>
+</head>
+<body>
+	<form>
+		<input type="button" value="click">
+		<br/>
+		<input type="text" name="text1">
+		<br/>
+		<img src="java.png"> //form length i etkilemez. img forma ait degil demek.!
+	</form>
+    <hr/><hr/>
+    <form>
+        <input type="button" value="qwe">
+        <br/>
+        <input type="button" value="mg">
+        <br/>
+        <input type="text" name="sd">
+        <br/>
+        <img src="java.png"> //fomr length i etkilemez. img forma ait degil demek.!
+    </form>
+
+	<script type="text/javascript">
+
+        //document.forms -> form etiketinden sonra yazılan kod çalışır . önce yazılırsa çalışmaz.
+        var formUzunlugu = document.forms[0].length;
+        //forms[0] bir sayfadaki 0 . indexli form tagı
+        alert(formUzunlugu);
+        var formUzunlugu2 = document.forms[1].length;
+        alert(formUzunlugu2);
+        var formElemani = document.forms[0].elements[0].value;
+        alert("1. form 1. elemanın değeri : " + formElemani);
+	</script>
+
+</body>
+</html>

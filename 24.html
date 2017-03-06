@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>24. EventHandler'lar-onLoad/onUnload/onScroll</title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+		
+		function onLoad() {
+			alert("welcome");
+        }
+		function onUnload() {
+			alert("Yeniden bekleriz.");
+        }
+              function onScroll() {
+            alert("Kaydırma işlemi");
+        }
+
+	</script>
+</head>
+<body onload="onLoad();" onunload="onUnload();" onscroll="onScroll();">
+<!--//onunload="onUnload(); chrome da çalışmıyor. i.e de çalışıyor-->
+<!--onscroll i.e de dçalışmıyor chrome da çalışıyor-->
+
+<a href="http://www.javaxlog.blogspot.com">Javaxlog</a>
+<hr/>
+<script>
+    for(var i=0;i<100;i++) {
+        document.write(i + "<br/>");
+    }
+</script>
+
+
+</body>
+</html>

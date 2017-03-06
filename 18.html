@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>18. Array'de Prompt Komutu </title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+
+		var deger = prompt("Bir değer giriniz: ");
+		document.write(deger);
+		document.write("<hr/>")
+
+        var liste = new Array();
+		for(var i = 0 ; i < 5 ; i++) {
+            liste[i] = prompt(i+1 + ". değeri giriniz: ");
+        }
+
+		document.write(liste.join());
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

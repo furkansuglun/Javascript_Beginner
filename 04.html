@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04.dongü functions</title>
+    <script type="text/javascript">
+
+        function first(param) {
+            document.write(param + " .times first function ");
+            second(param);
+            //burada param = 2 olacak ilk basta second functionu kullanıldıgı ıcın ve hr
+            //seferınde artacak
+        }
+
+        function second(param2) {
+            document.write(param2 + " .times second function ");
+            param2++;
+            first(param2);
+
+        }
+
+       /* function result() {
+            first();
+
+            second();
+        }
+
+        result();*/
+
+        first(1);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

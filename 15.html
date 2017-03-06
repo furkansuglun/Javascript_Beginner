@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>15. Array'de Length ve for Döngüsü ile Yazdırma </title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+
+
+		var dersListesi = new Array("java" , "js" , "angular" ,"ionic" , "python");
+
+        var ulkeler = new Array();
+        ulkeler[0] = "Türkiye";
+        ulkeler[1] = "Finlandiya";
+        ulkeler[2] = "İsviçre";
+
+        var uzunluk1 = dersListesi.length;
+        var uzunluk2 = ulkeler.length;
+		document.write(uzunluk1);
+        document.write("<hr/>");
+        document.write(uzunluk2);
+        document.write("<hr/>");
+        document.write("<hr/>");
+
+		for(var x = 0 ; x < dersListesi.length ; x++) {
+		    document.write(dersListesi[x] + "<br/>");
+		}
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

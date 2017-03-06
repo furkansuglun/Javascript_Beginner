@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>20. Date Objesi (get ve set methodları ile) </title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+
+		var time = new Date();
+		document.write(time);
+		var hour = time.getHours();
+		document.write("<hr/>Hour:" +hour.toString());
+        var minutes = time.getMinutes();
+        document.write("<hr/>Miutes:" +minutes.toString());
+
+        var createTime = new Date(2017,11,24,12,05,30); //ay 0 dan vbaslıyor !!! yıl/ay/gun/saat/dk/san
+        document.write("<hr/>Created Time:" + createTime);
+
+        time.setHours(07);
+        document.write("<hr/>Created Hour : " + time);
+        time.setMinutes(07);
+        document.write("<hr/>Created Minutes : " + time);
+
+        document.write("<hr/><hr/>");
+
+        function yasKontrol() {
+            var dogumYili = prompt("Doğum Yılınız(Yıl!): ");
+            var mevcutZaman = new Date();
+            var sinirYil = mevcutZaman.getFullYear()-18; //getFullYear suanki yıl;
+            var yas = mevcutZaman.getFullYear()-dogumYili;
+            if(dogumYili > sinirYil) {
+                alert("Yaşınız küçük.Yaşınız: " + yas);
+            }
+            else {
+                alert("Hosgeldiniz..Yaşınız: " + yas);
+            }
+        }
+
+
+        yasKontrol();
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

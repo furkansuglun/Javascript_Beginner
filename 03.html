@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03.return ve iç içe function</title>
+    <script type="text/javascript">
+
+        //return ekrana yazdırmaz! ekrana yazırmayı unutmayalım!
+        function usAl(sayi) {
+            return sayi*sayi;
+        }
+
+        function kupAl(sayi) {
+            return sayi*sayi*sayi;
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="üsAl" onclick="document.write(usAl(2))" />
+<input type="button" value="küpAl" onclick="document.write(kupAl(2))" />
+<input type="button" value="iç içe küp(kare) " onclick="document.write(kupAl(usAl(2)))" />
+</body>
+</html>

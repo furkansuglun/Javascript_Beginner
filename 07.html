@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>07. iç içe if/else</title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+
+		var ad = "ads" , soyad = "süğlün";
+
+		if(ad == "furkan") {
+		    if(soyad == "süğlün") {
+		        document.write("aranılan kişi bulundu.")
+			}
+			else {
+		        document.write("soyad eşleşmedi")
+			}
+		}
+		else {
+		    document.write("ad eşleşmedi . soyada bakılmya gerek kalmadı.")
+		}
+
+		document.write("<br/><br/>")
+
+		if((ad=="furkan") && (soyad="süğlün")) {
+		    document.write("eşlemeş başarılı");
+		}
+		else if ((ad=="furkan") || (soyad == "süğlün")){
+			document.write("ad ve yasoyad eşleşti");
+		}
+		else {
+		    document.write("eşleme başarısız.")
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

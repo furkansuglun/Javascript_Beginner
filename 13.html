@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>13. Classlarda Metod Çağırma ve Geçici Class</title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+
+
+		//############## ek bilgi
+		var ulke = {isim:"Türkiye" , dil:"Türkçe" , konum : "Avrupa,Asya" , kurulusYili: "1923" }
+		document.write("Ülke: <b>" +ulke.isim + "</b><br/>");
+        document.write("Dil:<b>" +ulke.dil + "</b><br/>");
+        document.write("Konum:<b>" +ulke.konum + "</b><br/>");
+        document.write("Kuruluş yılı:<b>" +ulke.kurulusYili + "</b><br/>");
+
+
+        //yukarıdaki gibi bır obje olusturmak pratik görünür ancak
+		//naska bır ulke tanımlamak istediğimizde tekrar takrar değişkenleri yazmamız gerekiyor.
+		//bu yuzden geçici olarak bu obje olusturma yontemını kullanalım !
+
+		//--------------------------------------------
+
+		document.write("<hr/>");
+
+        //class olutururken head tagı arasında olmaya dıkkat edilmelidir.
+        function ders(isim,kod,hoca,tarih) {
+            this.isim = isim;
+            this.kod = kod;
+            this.hoca = hoca;
+            this.tarih = tarih;
+        	this.kacSenedir = kacSenedir;
+        	this.dahaOncekiALınanDersAdi = dahaOncekiALınanDersAdi;
+		}
+
+		
+		function kacSenedir() { //bu metodu ana classımızda tanıtmalıyız !!!!!!!!!!!!!!!!Q
+			//bır dersin kac senedir verildiğini ogrenek istiyoruz
+			var x = 2017 - this.tarih; //this.tarih hangi objedeysek onu alır.
+
+			return x;
+
+        }
+
+
+        //parametleri ve bır ana metot ıcınde cagırılan metot
+        function dahaOncekiALınanDersAdi(dersAdi) {
+
+			if (dersAdi == this.isim) {
+			    return "Daha önce bu dersi almışsınız. ";
+			}
+			else {
+			    return "daha önce bu dersi almamışsınız";
+			}
+
+
+
+        }
+		
+
+
+	</script>
+</head>
+<body>
+
+<script>
+
+	var ders1 = new ders("java",01,"furkan",2014);
+	document.write(ders1.kacSenedir());
+	document.write("<hr/>")
+	document.write(ders1.dahaOncekiALınanDersAdi("java"));
+
+</script>
+
+</body>
+</html>

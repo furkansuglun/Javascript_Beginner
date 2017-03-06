@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>26. Çoklu Formlar ve Elemanlara Ulaşma</title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+
+
+
+	</script>
+</head>
+<body>
+	<form name="girisAlani">
+		<fieldset>
+			<legend>Kullanıcı Giriş</legend>
+			Kullanıcı : <input type="text" name="name">
+			<br/>
+			Şifre yeri : <input type="password" name="password">
+			<input type="button" value="Submit" onclick="getPassword();">
+		</fieldset>
+	</form>
+	<hr/>
+	<form name="anketAlani">
+		<fieldset>
+			<legend>Anket Alanı</legend>
+			İkamet ili ? <br/>
+			<input type="radio" name="address" value="istanbul">Istanbul
+			<input type="radio" name="address" value="ankara">Ankara
+			<input type="radio" name="address" value="sakarya">Sakarya
+			<input type="radio" name="address" value="bartin">Bartın
+		</fieldset>
+	</form>
+
+<script type="text/javascript">
+	var listLength = document.forms[0].length;
+	var name = document.forms[0].elements[3].type; //index 0 dan baslar fieldset de bir fomr elemanı
+	alert(name);
+    var listLength2 = document.forms[1].length;
+    alert(listLength2);
+    var address = document.anketAlani.elements[3].value;
+    alert(address);
+
+
+    function getPassword() {
+	var password = document.girisAlani.password.value;
+	document.write(password);
+	}
+
+    </script>
+
+</body>
+</html>

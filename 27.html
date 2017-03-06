@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>27. Çoklu Formlar ve checked komutu</title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+
+
+
+	</script>
+</head>
+<body>
+	<form name="girisAlani">
+		<fieldset>
+			<legend>Kullanıcı Giriş</legend>
+			Kullanıcı : <input type="text" name="name">
+			<br/>
+			Şifre yeri : <input type="password" name="password">
+			<input type="button" value="Submit">
+		</fieldset>
+	</form>
+
+	<hr/>
+
+	<form name="anketAlani">
+		<fieldset>
+			<legend>Anket Alanı</legend>
+			İkamet ili ? <br/>
+			<input type="checkbox" name="address" value="istanbul">Istanbul
+			<input type="checkbox" name="address" value="ankara">Ankara
+			<input type="checkbox" name="address" value="sakarya">Sakarya
+			<input type="checkbox" name="address" value="bartin">Bartın
+
+		</fieldset>
+	</form>
+
+	<input type="button" value="Submit" onclick="choosenCity();">
+
+<script type="text/javascript">
+	
+	function choosenCity() {
+		var length = document.anketAlani.length;
+	    var liste = new Array ();
+
+	    for(var i=0;i<length;i++) {
+	        if(document.anketAlani.elements[i].checked == true) {
+	            liste.push(document.anketAlani.elements[i].value);
+			}
+			else {
+	            liste = liste;
+			}
+		}
+
+		alert("Seçilenler: " + liste.join());
+
+    }
+
+//	var choosen = document.anketAlani.address[2].value;
+//	alert(choosen);
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02.parameteli fonksiyon tanıtma ve çağırma</title>
+    <script>
+        //tek parametreli
+        function yas(x) {
+            document.write("Benim yaşım : " + x);
+        }
+        
+        //çok parametreli
+        function identity(name,surname) {
+            document.write("may name is <b>" + name + "</b> <i>" + surname + "</i>");
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="yas()" onclick="yas(2)"/>
+<input type="button" value="identity()" onclick="identity('Furkan','Süğlün')"/>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>16. Array'de Join, Reverse, Concat Metodları </title>
+	<meta charset="windows-1254"/>
+	<script type="text/javascript">
+
+		var mevctuDersler = new Array ("Java" , "Javascript");
+		var verilecekDersler = new Array ("Python" , "Ionic");
+
+		for (var i = 0 ; i < mevctuDersler.length ; i++) {
+		    document.write(mevctuDersler[i] + "<br/>");
+		}
+
+		document.write("<hr/>")
+
+        for (var i = 0 ; i < verilecekDersler.length ; i++) {
+            document.write(verilecekDersler[i] + "<br/>");
+        }
+
+        document.write("<hr/>")
+
+        document.write("<b>Join Metodu</b> <br/>" + mevctuDersler.join());
+
+        document.write("<hr/>")
+
+        document.write("<b>Join Metodu</b> <br/>" + verilecekDersler.join());
+
+        document.write("<hr/>")
+
+        document.write("<b>Concat Metodu(1.array , 2.array)</b> <br/>" + (mevctuDersler.concat(verilecekDersler)).join());
+
+        //eğer concat olmasaydı
+		document.write("<hr/><b>Concat metodu olmadan birlşetirme</b><br/>")
+
+		var birlesmisDersler = new Array();
+		birlesmisDersler[0] = mevctuDersler[0];
+		birlesmisDersler[1] = mevctuDersler[1];
+		birlesmisDersler[2] = verilecekDersler[0];
+		birlesmisDersler[3] = verilecekDersler[1];
+
+		document.write(birlesmisDersler.join());
+
+
+        document.write("<hr/>")
+
+        document.write("<b>reverse Metoduolmadan</b><br/>");
+
+        var tersDersler = new Array();
+        tersDersler[0] = birlesmisDersler[3];
+        tersDersler[1] = birlesmisDersler[2];
+        tersDersler[2] = birlesmisDersler[1];
+        tersDersler[3] = birlesmisDersler[0];
+
+        document.write(tersDersler.join());
+
+		document.write("<hr/>")
+
+		document.write("<b>reverse Metodu</b><br/>" + (birlesmisDersler.reverse()).join());
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
